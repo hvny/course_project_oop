@@ -18,7 +18,7 @@ namespace IS_v2.contexts
             //base.OnConfiguring(optionsBuilder);
             if (!optionsBuilder.IsConfigured)
             {
-                
+                optionsBuilder.UseNpgsql("Host=localhost;Database=pc_repair_service;Username=postgres;Password=8631");
             }
         }
     }

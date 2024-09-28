@@ -9,6 +9,7 @@ namespace IS_v2
         {
             InitializeComponent();
             _employeeContext = new EmployeeContext();
+            loadEmployees();
         }
 
         private void buttonSearchEmpl_Click(object sender, EventArgs e)
@@ -22,9 +23,10 @@ namespace IS_v2
             addEmplFrom.ShowDialog();
         }
 
-       private void loavEmployees()
+        private void loadEmployees()
         {
             var employees = _employeeContext.Employees.ToList();
+            dataGridViewEmpl.DataSource = employees;
 
         }
     }
