@@ -3,23 +3,35 @@
   "WorkspaceRootPath": "D:\\projects\\course_projects\\course_project_oop\\IS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\requestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\requestform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|D:\\projects\\course_projects\\course_project_oop\\IS\\is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\authform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\authform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|D:\\projects\\course_projects\\course_project_oop\\IS\\is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|D:\\projects\\course_projects\\course_project_oop\\IS\\is\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|d:\\projects\\course_projects\\course_project_oop\\is\\is\\classes\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|D:\\projects\\course_projects\\course_project_oop\\IS\\is\\classes\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C443BD7-D825-4249-91F1-C7DF244A33F1}|IS\\IS.csproj|solutionrelative:is\\classes\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,24 +42,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Form1.cs",
-              "RelativeDocumentMoniker": "IS\\Form1.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Form1.cs",
-              "RelativeToolTip": "IS\\Form1.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAqwB8AAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "RequestForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\RequestForm.cs",
+              "RelativeDocumentMoniker": "IS\\RequestForm.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\RequestForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "IS\\RequestForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T12:06:47.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T14:34:30.037Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "AdminForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\AdminForm.cs",
+              "RelativeDocumentMoniker": "IS\\AdminForm.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\AdminForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "IS\\AdminForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T14:31:11.833Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\AuthForm.cs",
+              "RelativeDocumentMoniker": "IS\\AuthForm.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\AuthForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "IS\\AuthForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T13:48:40.679Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Employee.cs",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Classes\\Employee.cs",
               "RelativeDocumentMoniker": "IS\\Classes\\Employee.cs",
@@ -55,12 +90,11 @@
               "RelativeToolTip": "IS\\Classes\\Employee.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T11:50:48.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T11:50:48.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Classes\\User.cs",
               "RelativeDocumentMoniker": "IS\\Classes\\User.cs",
@@ -68,12 +102,11 @@
               "RelativeToolTip": "IS\\Classes\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T11:49:44.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T11:49:44.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Program.cs",
               "RelativeDocumentMoniker": "IS\\Program.cs",
@@ -86,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Form1.cs",
               "RelativeDocumentMoniker": "IS\\Form1.cs",
@@ -95,6 +128,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T19:05:53.011Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Form1.cs",
+              "RelativeDocumentMoniker": "IS\\Form1.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS\\IS\\Form1.cs",
+              "RelativeToolTip": "IS\\Form1.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T12:06:47.603Z",
+              "EditorCaption": ""
             }
           ]
         }
