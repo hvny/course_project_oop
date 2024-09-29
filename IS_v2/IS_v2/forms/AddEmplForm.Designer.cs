@@ -85,6 +85,7 @@
             buttonAddNewEmpl.TabIndex = 5;
             buttonAddNewEmpl.Text = "Добавить";
             buttonAddNewEmpl.UseVisualStyleBackColor = true;
+            buttonAddNewEmpl.Click += buttonAddNewEmpl_Click;
             // 
             // label1
             // 

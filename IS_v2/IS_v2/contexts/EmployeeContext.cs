@@ -10,8 +10,8 @@ namespace IS_v2.contexts
 {
     public class EmployeeContext : DbContext
     {
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<Position> Positions { get; set; }
+        public DbSet<Employee> employees { get; set; }
+        public DbSet<Position> positions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

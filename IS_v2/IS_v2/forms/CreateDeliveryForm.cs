@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IS_v2
+namespace IS_v2.forms
 {
-    public partial class AddEmplForm : Form
+    public partial class CreateDeliveryForm : Form
     {
-        public AddEmplForm()
+        public CreateDeliveryForm()
         {
             InitializeComponent();
         }
