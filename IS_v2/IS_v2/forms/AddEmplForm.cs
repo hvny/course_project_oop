@@ -1,19 +1,19 @@
 ﻿using IS_v2.classes;
-using IS_v2.contexts;
 using System.Data;
 using System.Text.RegularExpressions;
+using AppContext = IS_v2.contexts.AppContext;
 
 namespace IS_v2
 {
     public partial class AddEmplForm : Form
     {
 
-        private EmployeeContext _context;
+        private AppContext _context;
         public Employee NewEmployee { get; set; }
         public AddEmplForm()
         {
             InitializeComponent();
-            _context = new EmployeeContext();
+            _context = new AppContext();
 
             loadPositions();
         }
@@ -72,6 +72,7 @@ namespace IS_v2
             
             _context.employees.Add(NewEmployee);
             _context.SaveChanges();
+            MessageBox.Show("Сотрудник добавлен.");
             this.Close();
         }
     }

@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 
 namespace IS_v2.contexts
 {
-    public class EmployeeContext : DbContext
+    public class AppContext : DbContext
     {
         public DbSet<Employee> employees { get; set; }
         public DbSet<Position> positions { get; set; }
+        public DbSet<Component> components { get; set; }
+        public DbSet<Delivery> deliveries { get; set; }
+        public DbSet<DeliveryComponent> delivery_components { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

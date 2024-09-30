@@ -42,13 +42,16 @@
             buttonDeleteEmpl = new Button();
             buttonAddEmpl = new Button();
             dataGridViewEmpl = new DataGridView();
-            label1 = new Label();
             empl_id = new DataGridViewTextBoxColumn();
             position = new DataGridViewTextBoxColumn();
             first_name = new DataGridViewTextBoxColumn();
             last_name = new DataGridViewTextBoxColumn();
             middle_name = new DataGridViewTextBoxColumn();
             phone_number = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            tabPageWarehouse = new TabPage();
+            label3 = new Label();
+            dataGridViewComponents = new DataGridView();
             tabControl1.SuspendLayout();
             tabPageOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
@@ -56,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPageEmployees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmpl).BeginInit();
+            tabPageWarehouse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewComponents).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -63,6 +68,7 @@
             tabControl1.Controls.Add(tabPageOrders);
             tabControl1.Controls.Add(tabPageDeliveries);
             tabControl1.Controls.Add(tabPageEmployees);
+            tabControl1.Controls.Add(tabPageWarehouse);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -202,16 +208,7 @@
             dataGridViewEmpl.RowHeadersWidth = 51;
             dataGridViewEmpl.Size = new Size(700, 365);
             dataGridViewEmpl.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(258, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Список сотрудников";
+            dataGridViewEmpl.CellContentClick += dataGridViewEmpl_CellContentClick;
             // 
             // empl_id
             // 
@@ -232,18 +229,21 @@
             first_name.HeaderText = "Имя";
             first_name.MinimumWidth = 6;
             first_name.Name = "first_name";
+            first_name.Width = 125;
             // 
             // last_name
             // 
             last_name.HeaderText = "Фамилия";
             last_name.MinimumWidth = 6;
             last_name.Name = "last_name";
+            last_name.Width = 125;
             // 
             // middle_name
             // 
             middle_name.HeaderText = "Отчество";
             middle_name.MinimumWidth = 6;
             middle_name.Name = "middle_name";
+            middle_name.Width = 125;
             // 
             // phone_number
             // 
@@ -251,6 +251,46 @@
             phone_number.MinimumWidth = 6;
             phone_number.Name = "phone_number";
             phone_number.Width = 125;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(258, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Список сотрудников";
+            // 
+            // tabPageWarehouse
+            // 
+            tabPageWarehouse.Controls.Add(dataGridViewComponents);
+            tabPageWarehouse.Controls.Add(label3);
+            tabPageWarehouse.Location = new Point(4, 29);
+            tabPageWarehouse.Name = "tabPageWarehouse";
+            tabPageWarehouse.Size = new Size(908, 403);
+            tabPageWarehouse.TabIndex = 3;
+            tabPageWarehouse.Text = "Склад";
+            tabPageWarehouse.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label3.Location = new Point(3, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(224, 32);
+            label3.TabIndex = 0;
+            label3.Text = "Список запчастей";
+            // 
+            // dataGridViewComponents
+            // 
+            dataGridViewComponents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewComponents.Location = new Point(3, 35);
+            dataGridViewComponents.Name = "dataGridViewComponents";
+            dataGridViewComponents.RowHeadersWidth = 51;
+            dataGridViewComponents.Size = new Size(730, 362);
+            dataGridViewComponents.TabIndex = 1;
             // 
             // Form1
             // 
@@ -269,6 +309,9 @@
             tabPageEmployees.ResumeLayout(false);
             tabPageEmployees.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmpl).EndInit();
+            tabPageWarehouse.ResumeLayout(false);
+            tabPageWarehouse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewComponents).EndInit();
             ResumeLayout(false);
         }
 
@@ -295,5 +338,8 @@
         private DataGridViewTextBoxColumn last_name;
         private DataGridViewTextBoxColumn middle_name;
         private DataGridViewTextBoxColumn phone_number;
+        private TabPage tabPageWarehouse;
+        private DataGridView dataGridViewComponents;
+        private Label label3;
     }
 }

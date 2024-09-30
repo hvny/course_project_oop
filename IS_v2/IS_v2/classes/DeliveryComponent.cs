@@ -7,18 +7,24 @@ using System.Threading.Tasks;
 
 namespace IS_v2.classes
 {
-    public class Component
+    public class DeliveryComponent
     {
+        [Column("delivery_component_id")]
+        public int DeliveryComponentId { get; set; }
+
         [Column("component_id")]
         public int ComponentId { get; set; }
 
-        [Column("name")]
-        public string Name { get; set; }
+        /*[Column("delivery_component_id")]
+        public Component Component { get; set; }*/
 
         [Column("price")]
         public decimal Price { get; set; }
 
         [Column("quantity")]
         public int Quantity { get; set; }
+
+        [Column("delivery_id")]
+        public int DeliveryId { get; set; }
     }
 }

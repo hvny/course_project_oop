@@ -1,16 +1,16 @@
-using IS_v2.contexts;
+using AppContext = IS_v2.contexts.AppContext;
 
 namespace IS_v2
 {
     public partial class Form1 : Form
     {
-        private EmployeeContext _context;
+        private AppContext _context;
         private AddEmplForm addEmplForm;
         public Form1()
         {
             InitializeComponent();
             InitializeAddEmplForm();
-            _context = new EmployeeContext();
+            _context = new AppContext();
             loadEmployees();
         }
 
@@ -27,9 +27,8 @@ namespace IS_v2
 
         private void addEmplForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show("Сотрудник добавлен.");
             loadEmployees();
-            
+
         }
 
         private void loadEmployees()
@@ -48,16 +47,45 @@ namespace IS_v2
                                  e.PhoneNumber
                              }).ToList();
 
-            foreach (var employee in employees)
+            if (employees.Count > 0 )
             {
-                dataGridViewEmpl.Rows.Add(
-                    employee.employeeId,
-                    employee.Position,
-                    employee.FirstName,
-                    employee.LastName,
-                    employee.MiddleName,
-                    employee.PhoneNumber
-                );
+                foreach (var employee in employees)
+                {
+                    dataGridViewEmpl.Rows.Add(
+                        employee.employeeId,
+                        employee.Position,
+                        employee.FirstName,
+                        employee.LastName,
+                        employee.MiddleName,
+                        employee.PhoneNumber
+                    );
+                }
+            }
+        }
+
+        private void loadComponents()
+        {
+            dataGridViewComponents.Rows.Clear();
+
+            var components = (from c in _context.components
+                              select new
+                              {
+                                  c.ComponentId,
+                                  c.Name,
+                                  c.Price,
+                                  c.Quantity
+                              }).ToList();
+
+            if (components.Count > 0)
+            {
+                foreach (var component in components)
+                {
+                    dataGridViewComponents.Rows.Add(
+                        component.ComponentId,
+                        component.Name,
+                        component.Quantity
+                    );
+                }
             }
         }
 
@@ -87,6 +115,11 @@ namespace IS_v2
             {
                 MessageBox.Show("Выберите сотрудника для удаления.");
             }
+        }
+
+        private void dataGridViewEmpl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
