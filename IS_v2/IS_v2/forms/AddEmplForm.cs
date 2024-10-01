@@ -10,12 +10,16 @@ namespace IS_v2
 
         private AppContext _context;
         public Employee NewEmployee { get; set; }
-        public AddEmplForm()
+        private Form _parentForm;
+
+        public AddEmplForm(Form parentForm)
         {
             InitializeComponent();
             _context = new AppContext();
-
+            _parentForm = parentForm;
             loadPositions();
+            this.FormClosed += AddEmplForm_FormClosed;
+
         }
 
         private void loadPositions()
@@ -74,6 +78,14 @@ namespace IS_v2
             _context.SaveChanges();
             MessageBox.Show("Сотрудник добавлен.");
             this.Close();
+        }
+
+        private void AddEmplForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (_parentForm is Form1 mainForm)
+            {
+                mainForm.loadEmployees();
+            }
         }
     }
 }

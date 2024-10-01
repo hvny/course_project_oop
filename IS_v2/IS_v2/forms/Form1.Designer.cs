@@ -31,13 +31,17 @@
             tabControl1 = new TabControl();
             tabPageOrders = new TabPage();
             buttonGoToOrder = new Button();
-            buttonCreateOrder = new Button();
+            buttonAddOrder = new Button();
             label2 = new Label();
             dataGridViewOrders = new DataGridView();
             tabPageDeliveries = new TabPage();
-            dataGridView1 = new DataGridView();
+            dataGridViewDeliveries = new DataGridView();
+            delivery_id = new DataGridViewTextBoxColumn();
+            components_list = new DataGridViewTextBoxColumn();
+            date = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
             buttonGoToDelivery = new Button();
-            buttonCreateDelivery = new Button();
+            buttonAddDelivery = new Button();
             tabPageEmployees = new TabPage();
             buttonDeleteEmpl = new Button();
             buttonAddEmpl = new Button();
@@ -50,13 +54,17 @@
             phone_number = new DataGridViewTextBoxColumn();
             label1 = new Label();
             tabPageWarehouse = new TabPage();
-            label3 = new Label();
             dataGridViewComponents = new DataGridView();
+            ComponentId = new DataGridViewTextBoxColumn();
+            Name = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
+            Quantity = new DataGridViewTextBoxColumn();
+            label3 = new Label();
             tabControl1.SuspendLayout();
             tabPageOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
             tabPageDeliveries.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDeliveries).BeginInit();
             tabPageEmployees.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmpl).BeginInit();
             tabPageWarehouse.SuspendLayout();
@@ -78,7 +86,7 @@
             // tabPageOrders
             // 
             tabPageOrders.Controls.Add(buttonGoToOrder);
-            tabPageOrders.Controls.Add(buttonCreateOrder);
+            tabPageOrders.Controls.Add(buttonAddOrder);
             tabPageOrders.Controls.Add(label2);
             tabPageOrders.Controls.Add(dataGridViewOrders);
             tabPageOrders.Location = new Point(4, 29);
@@ -98,14 +106,14 @@
             buttonGoToOrder.Text = "Перейти к заказу";
             buttonGoToOrder.UseVisualStyleBackColor = true;
             // 
-            // buttonCreateOrder
+            // buttonAddOrder
             // 
-            buttonCreateOrder.Location = new Point(737, 39);
-            buttonCreateOrder.Name = "buttonCreateOrder";
-            buttonCreateOrder.Size = new Size(154, 37);
-            buttonCreateOrder.TabIndex = 2;
-            buttonCreateOrder.Text = "Создать заказ";
-            buttonCreateOrder.UseVisualStyleBackColor = true;
+            buttonAddOrder.Location = new Point(737, 39);
+            buttonAddOrder.Name = "buttonAddOrder";
+            buttonAddOrder.Size = new Size(154, 37);
+            buttonAddOrder.TabIndex = 2;
+            buttonAddOrder.Text = "Создать заказ";
+            buttonAddOrder.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -128,9 +136,9 @@
             // 
             // tabPageDeliveries
             // 
-            tabPageDeliveries.Controls.Add(dataGridView1);
+            tabPageDeliveries.Controls.Add(dataGridViewDeliveries);
             tabPageDeliveries.Controls.Add(buttonGoToDelivery);
-            tabPageDeliveries.Controls.Add(buttonCreateDelivery);
+            tabPageDeliveries.Controls.Add(buttonAddDelivery);
             tabPageDeliveries.Location = new Point(4, 29);
             tabPageDeliveries.Name = "tabPageDeliveries";
             tabPageDeliveries.Padding = new Padding(3);
@@ -139,14 +147,43 @@
             tabPageDeliveries.Text = "Поставки";
             tabPageDeliveries.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewDeliveries
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 30);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(685, 367);
-            dataGridView1.TabIndex = 2;
+            dataGridViewDeliveries.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDeliveries.Columns.AddRange(new DataGridViewColumn[] { delivery_id, components_list, date, status });
+            dataGridViewDeliveries.Location = new Point(6, 30);
+            dataGridViewDeliveries.Name = "dataGridViewDeliveries";
+            dataGridViewDeliveries.RowHeadersWidth = 51;
+            dataGridViewDeliveries.Size = new Size(685, 367);
+            dataGridViewDeliveries.TabIndex = 2;
+            // 
+            // delivery_id
+            // 
+            delivery_id.HeaderText = "id";
+            delivery_id.MinimumWidth = 6;
+            delivery_id.Name = "delivery_id";
+            delivery_id.Width = 125;
+            // 
+            // components_list
+            // 
+            components_list.HeaderText = "Детали";
+            components_list.MinimumWidth = 6;
+            components_list.Name = "components_list";
+            components_list.Width = 125;
+            // 
+            // date
+            // 
+            date.HeaderText = "Дата прибытия";
+            date.MinimumWidth = 6;
+            date.Name = "date";
+            date.Width = 125;
+            // 
+            // status
+            // 
+            status.HeaderText = "Статус";
+            status.MinimumWidth = 6;
+            status.Name = "status";
+            status.Width = 125;
             // 
             // buttonGoToDelivery
             // 
@@ -156,15 +193,17 @@
             buttonGoToDelivery.TabIndex = 1;
             buttonGoToDelivery.Text = "Перейти к поставке";
             buttonGoToDelivery.UseVisualStyleBackColor = true;
+            buttonGoToDelivery.Click += buttonGoToDelivery_Click;
             // 
-            // buttonCreateDelivery
+            // buttonAddDelivery
             // 
-            buttonCreateDelivery.Location = new Point(715, 30);
-            buttonCreateDelivery.Name = "buttonCreateDelivery";
-            buttonCreateDelivery.Size = new Size(171, 40);
-            buttonCreateDelivery.TabIndex = 0;
-            buttonCreateDelivery.Text = "Добавить поставку";
-            buttonCreateDelivery.UseVisualStyleBackColor = true;
+            buttonAddDelivery.Location = new Point(715, 30);
+            buttonAddDelivery.Name = "buttonAddDelivery";
+            buttonAddDelivery.Size = new Size(171, 40);
+            buttonAddDelivery.TabIndex = 0;
+            buttonAddDelivery.Text = "Добавить поставку";
+            buttonAddDelivery.UseVisualStyleBackColor = true;
+            buttonAddDelivery.Click += buttonAddDelivery_Click;
             // 
             // tabPageEmployees
             // 
@@ -208,7 +247,6 @@
             dataGridViewEmpl.RowHeadersWidth = 51;
             dataGridViewEmpl.Size = new Size(700, 365);
             dataGridViewEmpl.TabIndex = 1;
-            dataGridViewEmpl.CellContentClick += dataGridViewEmpl_CellContentClick;
             // 
             // empl_id
             // 
@@ -273,6 +311,44 @@
             tabPageWarehouse.Text = "Склад";
             tabPageWarehouse.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewComponents
+            // 
+            dataGridViewComponents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewComponents.Columns.AddRange(new DataGridViewColumn[] { ComponentId, Name, Price, Quantity });
+            dataGridViewComponents.Location = new Point(3, 35);
+            dataGridViewComponents.Name = "dataGridViewComponents";
+            dataGridViewComponents.RowHeadersWidth = 51;
+            dataGridViewComponents.Size = new Size(730, 362);
+            dataGridViewComponents.TabIndex = 1;
+            // 
+            // ComponentId
+            // 
+            ComponentId.HeaderText = "id";
+            ComponentId.MinimumWidth = 6;
+            ComponentId.Name = "ComponentId";
+            ComponentId.Width = 125;
+            // 
+            // Name
+            // 
+            Name.HeaderText = "Наименование";
+            Name.MinimumWidth = 6;
+            Name.Name = "Name";
+            Name.Width = 125;
+            // 
+            // Price
+            // 
+            Price.HeaderText = "Цена за шт.";
+            Price.MinimumWidth = 6;
+            Price.Name = "Price";
+            Price.Width = 125;
+            // 
+            // Quantity
+            // 
+            Quantity.HeaderText = "Количество";
+            Quantity.MinimumWidth = 6;
+            Quantity.Name = "Quantity";
+            Quantity.Width = 125;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -283,29 +359,20 @@
             label3.TabIndex = 0;
             label3.Text = "Список запчастей";
             // 
-            // dataGridViewComponents
-            // 
-            dataGridViewComponents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewComponents.Location = new Point(3, 35);
-            dataGridViewComponents.Name = "dataGridViewComponents";
-            dataGridViewComponents.RowHeadersWidth = 51;
-            dataGridViewComponents.Size = new Size(730, 362);
-            dataGridViewComponents.TabIndex = 1;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(928, 450);
             Controls.Add(tabControl1);
-            Name = "Form1";
+           // Name = "Form1";
             Text = "Сервис ремонта компьютерной техники";
             tabControl1.ResumeLayout(false);
             tabPageOrders.ResumeLayout(false);
             tabPageOrders.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
             tabPageDeliveries.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDeliveries).EndInit();
             tabPageEmployees.ResumeLayout(false);
             tabPageEmployees.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmpl).EndInit();
@@ -327,11 +394,11 @@
         private Button buttonDeleteEmpl;
         private Label label2;
         private DataGridView dataGridViewOrders;
-        private Button buttonCreateOrder;
+        private Button buttonAddOrder;
         private Button buttonGoToOrder;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewDeliveries;
         private Button buttonGoToDelivery;
-        private Button buttonCreateDelivery;
+        private Button buttonAddDelivery;
         private DataGridViewTextBoxColumn empl_id;
         private DataGridViewTextBoxColumn position;
         private DataGridViewTextBoxColumn first_name;
@@ -341,5 +408,13 @@
         private TabPage tabPageWarehouse;
         private DataGridView dataGridViewComponents;
         private Label label3;
+        private DataGridViewTextBoxColumn ComponentId;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn Quantity;
+        private DataGridViewTextBoxColumn delivery_id;
+        private DataGridViewTextBoxColumn components_list;
+        private DataGridViewTextBoxColumn date;
+        private DataGridViewTextBoxColumn status;
     }
 }

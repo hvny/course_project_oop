@@ -15,8 +15,7 @@ namespace IS_v2.classes
         [Column("component_id")]
         public int ComponentId { get; set; }
 
-        /*[Column("delivery_component_id")]
-        public Component Component { get; set; }*/
+        public Component Component { get; set; }
 
         [Column("price")]
         public decimal Price { get; set; }

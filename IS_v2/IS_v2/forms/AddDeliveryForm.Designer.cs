@@ -1,6 +1,6 @@
 ﻿namespace IS_v2.forms
 {
-    partial class CreateDeliveryForm
+    partial class AddDeliveryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            textBox1 = new TextBox();
+            comboBoxComponents = new ComboBox();
             SuspendLayout();
             // 
-            // CreateDeliveryForm
+            // textBox1
+            // 
+            textBox1.Location = new Point(209, 54);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 0;
+            // 
+            // comboBoxComponents
+            // 
+            comboBoxComponents.FormattingEnabled = true;
+            comboBoxComponents.Location = new Point(210, 115);
+            comboBoxComponents.Name = "comboBoxComponents";
+            comboBoxComponents.Size = new Size(151, 28);
+            comboBoxComponents.TabIndex = 1;
+            // 
+            // AddDeliveryForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "CreateDeliveryForm";
+            Controls.Add(comboBoxComponents);
+            Controls.Add(textBox1);
+            Name = "AddDeliveryForm";
             Text = "Добавить поставку";
+            Load += AddDeliveryForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBox1;
+        private ComboBox comboBoxComponents;
     }
 }
