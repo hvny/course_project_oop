@@ -34,6 +34,12 @@
             buttonAddOrder = new Button();
             label2 = new Label();
             dataGridViewOrders = new DataGridView();
+            order_id = new DataGridViewTextBoxColumn();
+            order_createdAt = new DataGridViewTextBoxColumn();
+            order_status = new DataGridViewTextBoxColumn();
+            order_price = new DataGridViewTextBoxColumn();
+            order_device = new DataGridViewTextBoxColumn();
+            order_userPhoneNumber = new DataGridViewTextBoxColumn();
             tabPageDeliveries = new TabPage();
             dataGridViewDeliveries = new DataGridView();
             delivery_id = new DataGridViewTextBoxColumn();
@@ -114,6 +120,7 @@
             buttonAddOrder.TabIndex = 2;
             buttonAddOrder.Text = "Создать заказ";
             buttonAddOrder.UseVisualStyleBackColor = true;
+            buttonAddOrder.Click += buttonAddOrder_Click;
             // 
             // label2
             // 
@@ -128,11 +135,54 @@
             // dataGridViewOrders
             // 
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOrders.Columns.AddRange(new DataGridViewColumn[] { order_id, order_createdAt, order_status, order_price, order_device, order_userPhoneNumber });
             dataGridViewOrders.Location = new Point(6, 39);
             dataGridViewOrders.Name = "dataGridViewOrders";
             dataGridViewOrders.RowHeadersWidth = 51;
             dataGridViewOrders.Size = new Size(712, 358);
             dataGridViewOrders.TabIndex = 0;
+            // 
+            // order_id
+            // 
+            order_id.HeaderText = "id";
+            order_id.MinimumWidth = 6;
+            order_id.Name = "order_id";
+            order_id.Width = 40;
+            // 
+            // order_createdAt
+            // 
+            order_createdAt.HeaderText = "Создан";
+            order_createdAt.MinimumWidth = 6;
+            order_createdAt.Name = "order_createdAt";
+            order_createdAt.Width = 75;
+            // 
+            // order_status
+            // 
+            order_status.HeaderText = "Статус";
+            order_status.MinimumWidth = 6;
+            order_status.Name = "order_status";
+            order_status.Width = 95;
+            // 
+            // order_price
+            // 
+            order_price.HeaderText = "Общая стоимость";
+            order_price.MinimumWidth = 6;
+            order_price.Name = "order_price";
+            order_price.Width = 125;
+            // 
+            // order_device
+            // 
+            order_device.HeaderText = "Устройство";
+            order_device.MinimumWidth = 6;
+            order_device.Name = "order_device";
+            order_device.Width = 125;
+            // 
+            // order_userPhoneNumber
+            // 
+            order_userPhoneNumber.HeaderText = "Номер телефона клиента";
+            order_userPhoneNumber.MinimumWidth = 6;
+            order_userPhoneNumber.Name = "order_userPhoneNumber";
+            order_userPhoneNumber.Width = 125;
             // 
             // tabPageDeliveries
             // 
@@ -416,5 +466,11 @@
         private DataGridViewTextBoxColumn components_list;
         private DataGridViewTextBoxColumn date;
         private DataGridViewTextBoxColumn status;
+        private DataGridViewTextBoxColumn order_id;
+        private DataGridViewTextBoxColumn order_createdAt;
+        private DataGridViewTextBoxColumn order_status;
+        private DataGridViewTextBoxColumn order_price;
+        private DataGridViewTextBoxColumn order_device;
+        private DataGridViewTextBoxColumn order_userPhoneNumber;
     }
 }

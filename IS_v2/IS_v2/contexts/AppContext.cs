@@ -15,6 +15,12 @@ namespace IS_v2.contexts
         public DbSet<Component> components { get; set; }
         public DbSet<Delivery> deliveries { get; set; }
         public DbSet<DeliveryComponent> delivery_components { get; set; }
+        public DbSet<Order> orders { get; set; }
+        public DbSet<OrderService> order_services { get; set; }
+        public DbSet<Service> services { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<ServiceComponent> service_components { get; set; }
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

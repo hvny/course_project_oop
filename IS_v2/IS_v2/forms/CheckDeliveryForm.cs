@@ -1,17 +1,5 @@
-﻿using IS_v2.classes;
-using IS_v2.contexts;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using AppContext = IS_v2.contexts.AppContext;
 
 namespace IS_v2.forms
@@ -45,7 +33,7 @@ namespace IS_v2.forms
                 double deliveryTotalPrice = 0.0;
 
                 dataGridViewDeliveryComponents.Rows.Clear();
-        
+
                 textBoxDeliveryId.Text = delivery.DeliveryId.ToString();
                 textBoxDeliveryDate.Text = delivery.DeliveryDate.ToLocalTime().ToString("yyyy-MM-dd");
                 comboBoxDeliveryStatus.Text = delivery.Status;
@@ -124,8 +112,6 @@ namespace IS_v2.forms
                 this.Close();
             }
         }
-    
-
         private void CheckDeliveryForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (_parentForm is Form1 mainForm)

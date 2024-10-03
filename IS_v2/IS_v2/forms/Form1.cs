@@ -11,7 +11,6 @@ namespace IS_v2
             InitializeComponent();
             _context = new AppContext();
             loadAllData();
-
         }
 
         private void buttonAddEmpl_Click(object sender, EventArgs e)
@@ -20,11 +19,24 @@ namespace IS_v2
             addEmplForm.ShowDialog();
         }
 
+        private void buttonAddDelivery_Click(object sender, EventArgs e)
+        {
+            AddDeliveryForm addDeliveryForm = new AddDeliveryForm(_context, this);
+            addDeliveryForm.ShowDialog();
+        }
+
+        private void buttonAddOrder_Click(object sender, EventArgs e)
+        {
+            CreateOrderForm createOrderForm = new CreateOrderForm(_context, this);
+            createOrderForm.ShowDialog();
+        }
+
         private void loadAllData()
         {
             loadEmployees();
             loadComponents();
             loadDeliveries();
+            loadOrders();
         }
 
         public void loadEmployees()
@@ -120,6 +132,29 @@ namespace IS_v2
             }
         }
 
+        public void loadOrders()
+        {
+            var ordersExist = _context.orders.Any();
+
+            if (!ordersExist)
+            {
+                return;
+            }
+
+            // Получите заказы из базы данных
+            var orders = _context.orders.Select(o => new
+            {
+                order_id = o.OrderId,
+                order_createdAt = o.CreatedAt,
+                order_status = o.Status,
+                order_price = o.TotalPrice,
+                order_deviceName = o.DeviceName,
+                order_userPhoneNumber = o.User.PhoneNumber
+            }).ToList();
+
+            dataGridViewOrders.DataSource = orders;
+        }
+
         private void deactivateDeliveryRow(int rowId)
         {
             DataGridViewRow row = dataGridViewDeliveries.Rows[rowId];
@@ -179,12 +214,6 @@ namespace IS_v2
                 MessageBox.Show("Пожалуйста, выберите поставку.");
 
             }
-        }
-
-        private void buttonAddDelivery_Click(object sender, EventArgs e)
-        {
-            AddDeliveryForm addDeliveryForm = new AddDeliveryForm(_context, this);
-            addDeliveryForm.ShowDialog();
         }
     }
 }

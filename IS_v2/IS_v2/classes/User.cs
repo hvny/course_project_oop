@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 
 namespace IS_v2.classes
 {
-    public class Warehouse
+    public class User
     {
-        [Column("warehouse_id")]
+        [Column("user_id")]
+        public int UserId { get; set; }
 
-        public int WarehouseId { get; set; }
+        [Column("phonenumber")]
+        public string PhoneNumber { get; set; }
 
         [Column("name")]
         public string Name { get; set; }
-        public List<Component> Components { get; set; }
-        public Warehouse()
-        {
-            Components = new List<Component>();
-        }
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }
