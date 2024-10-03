@@ -36,3 +36,5 @@ D:\projects\course_projects\course_project_oop\IS_v2\IS_v2\obj\Debug\net8.0-wind
 D:\projects\course_projects\course_project_oop\IS_v2\IS_v2\obj\Debug\net8.0-windows\IS_v2.forms.CheckDeliveryForm.resources
 D:\projects\course_projects\course_project_oop\IS_v2\IS_v2\obj\Debug\net8.0-windows\IS_v2.forms.CreateOrderForm.resources
 D:\projects\course_projects\course_project_oop\IS_v2\IS_v2\obj\Debug\net8.0-windows\IS_v2.forms.AddDeliveryForm.resources
+D:\projects\course_projects\course_project_oop\IS_v2\IS_v2\obj\Debug\net8.0-windows\IS_v2.forms.AddComponentForm.resources
+D:\projects\course_projects\course_project_oop\IS_v2\IS_v2\obj\Debug\net8.0-windows\IS_v2.forms.AddServiceForm.resources

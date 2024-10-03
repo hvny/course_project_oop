@@ -1,4 +1,6 @@
+using IS_v2.classes;
 using IS_v2.forms;
+using Microsoft.EntityFrameworkCore;
 using AppContext = IS_v2.contexts.AppContext;
 
 namespace IS_v2
@@ -11,6 +13,11 @@ namespace IS_v2
             InitializeComponent();
             _context = new AppContext();
             loadAllData();
+        }
+        private void buttonAddComponent_Click(object sender, EventArgs e)
+        {
+            AddComponentForm addComponentForm = new AddComponentForm(_context, this);
+            addComponentForm.ShowDialog();
         }
 
         private void buttonAddEmpl_Click(object sender, EventArgs e)
@@ -31,12 +38,36 @@ namespace IS_v2
             createOrderForm.ShowDialog();
         }
 
+        private void buttonAddService_Click(object sender, EventArgs e)
+        {
+            AddServiceForm addServiceForm = new AddServiceForm(_context, this);
+            addServiceForm.ShowDialog();
+        }
+
         private void loadAllData()
         {
             loadEmployees();
             loadComponents();
             loadDeliveries();
             loadOrders();
+            loadServices();
+        }
+
+        public void loadServices()
+        {
+            dataGridViewServices.Rows.Clear();
+
+            var services = _context.services.ToList();
+
+            foreach (var service in services)
+            {
+                dataGridViewServices.Rows.Add(
+                    service.ServiceId,
+                    service.Name,
+                    service.Description,
+                    service.Price
+                );
+            }
         }
 
         public void loadEmployees()
@@ -134,27 +165,25 @@ namespace IS_v2
 
         public void loadOrders()
         {
-            var ordersExist = _context.orders.Any();
+            dataGridViewOrders.Rows.Clear();
 
-            if (!ordersExist)
+            var orders = _context.orders.Include(o => o.User).ToList();
+
+            foreach (var order in orders)
             {
-                return;
+                // Проверяем, существует ли пользователь для заказа
+                var userPhoneNumber = order.User != null ? order.User.PhoneNumber : "Не указан";
+
+                dataGridViewOrders.Rows.Add(
+                    order.OrderId,
+                    order.CreatedAt,
+                    order.Status,
+                    order.TotalPrice,
+                    order.DeviceName,
+                    userPhoneNumber
+                );
             }
-
-            // Получите заказы из базы данных
-            var orders = _context.orders.Select(o => new
-            {
-                order_id = o.OrderId,
-                order_createdAt = o.CreatedAt,
-                order_status = o.Status,
-                order_price = o.TotalPrice,
-                order_deviceName = o.DeviceName,
-                order_userPhoneNumber = o.User.PhoneNumber
-            }).ToList();
-
-            dataGridViewOrders.DataSource = orders;
         }
-
         private void deactivateDeliveryRow(int rowId)
         {
             DataGridViewRow row = dataGridViewDeliveries.Rows[rowId];
@@ -212,6 +241,88 @@ namespace IS_v2
             else
             {
                 MessageBox.Show("Пожалуйста, выберите поставку.");
+
+            }
+        }
+
+        private void buttonDeleteComponent_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewComponents.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Пожалуйста, выберите компонент для удаления.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var selectedRow = dataGridViewComponents.SelectedRows[0];
+            var componentId = Convert.ToInt32(selectedRow.Cells["ComponentId"].Value);
+
+            try
+            {
+                var componentToDelete = _context.components.Find(componentId);
+                if (componentToDelete == null)
+                {
+                    MessageBox.Show($"Компонент с ID {componentId} не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                _context.components.Remove(componentToDelete);
+                _context.SaveChanges();
+
+                MessageBox.Show($"Компонент {componentToDelete.Name} удален.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                loadComponents();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при удалении компонента: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonDeleteService_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewServices.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Пожалуйста, выберите услугу для удаления.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var selectedRow = dataGridViewServices.SelectedRows[0];
+            var serviceId = Convert.ToInt32(selectedRow.Cells["ServiceId"].Value);
+
+            try
+            {
+                var serviceToDelete = _context.services.Find(serviceId);
+                if (serviceToDelete == null)
+                {
+                    MessageBox.Show($"Услуга с ID {serviceId} не найдена.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                _context.services.Remove(serviceToDelete);
+                _context.SaveChanges();
+
+                MessageBox.Show($"Услуга {serviceToDelete.Name} удалена.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                loadServices();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при удалении услуги: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonGoToOrder_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewOrders.SelectedRows.Count > 0)
+            {
+                int orderId = (int)dataGridViewOrders.SelectedRows[0].Cells["order_id"].Value;
+
+                var orderDetailsForm = new CheckOrderForm(_context, this, orderId);
+                orderDetailsForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите заказ.");
 
             }
         }

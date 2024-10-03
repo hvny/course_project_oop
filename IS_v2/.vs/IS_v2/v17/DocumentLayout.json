@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\checkorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\checkorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\checkorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\checkorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\createorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\createorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\classes\\servicecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\classes\\servicecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\classes\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\classes\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\classes\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\classes\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\createorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\createorderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\checkdeliveryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\checkdeliveryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\checkdeliveryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\checkdeliveryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\checkdeliveryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|solutionrelative:is_v2\\forms\\checkdeliveryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7291CD4E-0A1D-4DE4-B8E9-7620802E8A0B}|IS_v2\\IS_v2.csproj|d:\\projects\\course_projects\\course_project_oop\\is_v2\\is_v2\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -50,101 +34,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServiceComponent.cs",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\classes\\ServiceComponent.cs",
-              "RelativeDocumentMoniker": "IS_v2\\classes\\ServiceComponent.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\classes\\ServiceComponent.cs",
-              "RelativeToolTip": "IS_v2\\classes\\ServiceComponent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T01:24:25.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\classes\\OrderService.cs",
-              "RelativeDocumentMoniker": "IS_v2\\classes\\OrderService.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\classes\\OrderService.cs",
-              "RelativeToolTip": "IS_v2\\classes\\OrderService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T01:20:24.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\classes\\Order.cs",
-              "RelativeDocumentMoniker": "IS_v2\\classes\\Order.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\classes\\Order.cs",
-              "RelativeToolTip": "IS_v2\\classes\\Order.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAkwCAAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T01:16:56.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CheckDeliveryForm.Designer.cs",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckDeliveryForm.Designer.cs",
-              "RelativeDocumentMoniker": "IS_v2\\forms\\CheckDeliveryForm.Designer.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckDeliveryForm.Designer.cs",
-              "RelativeToolTip": "IS_v2\\forms\\CheckDeliveryForm.Designer.cs",
-              "ViewState": "AQIAALAAAAAAAAAAAAArwL8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T23:21:58.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CheckDeliveryForm.cs",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckDeliveryForm.cs",
-              "RelativeDocumentMoniker": "IS_v2\\forms\\CheckDeliveryForm.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckDeliveryForm.cs",
-              "RelativeToolTip": "IS_v2\\forms\\CheckDeliveryForm.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAA8wHEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T23:20:12.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CheckDeliveryForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckDeliveryForm.cs",
-              "RelativeDocumentMoniker": "IS_v2\\forms\\CheckDeliveryForm.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckDeliveryForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "IS_v2\\forms\\CheckDeliveryForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T23:20:08.419Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "CreateOrderForm.cs",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CreateOrderForm.cs",
               "RelativeDocumentMoniker": "IS_v2\\forms\\CreateOrderForm.cs",
               "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CreateOrderForm.cs",
               "RelativeToolTip": "IS_v2\\forms\\CreateOrderForm.cs",
-              "ViewState": "AQIAAKoAAAAAAAAAAAAAAMUAAAAUAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAzwCwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T23:20:04.548Z",
+              "WhenOpened": "2024-10-03T14:00:18.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "CheckOrderForm.cs",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckOrderForm.cs",
+              "RelativeDocumentMoniker": "IS_v2\\forms\\CheckOrderForm.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckOrderForm.cs",
+              "RelativeToolTip": "IS_v2\\forms\\CheckOrderForm.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T13:52:38.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CheckOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckOrderForm.cs",
+              "RelativeDocumentMoniker": "IS_v2\\forms\\CheckOrderForm.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CheckOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "IS_v2\\forms\\CheckOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T13:28:18.275Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\Form1.cs",
+              "RelativeDocumentMoniker": "IS_v2\\forms\\Form1.cs",
+              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "IS_v2\\forms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T23:41:54.061Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CreateOrderForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\CreateOrderForm.cs",
               "RelativeDocumentMoniker": "IS_v2\\forms\\CreateOrderForm.cs",
@@ -156,28 +100,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\Form1.cs",
               "RelativeDocumentMoniker": "IS_v2\\forms\\Form1.cs",
               "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\Form1.cs",
               "RelativeToolTip": "IS_v2\\forms\\Form1.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAA7wAcAAAAkAAAA",
+              "ViewState": "AQIAAC4BAAAAAAAAAAAnwD8BAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T22:44:10.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\Form1.cs",
-              "RelativeDocumentMoniker": "IS_v2\\forms\\Form1.cs",
-              "ToolTip": "D:\\projects\\course_projects\\course_project_oop\\IS_v2\\IS_v2\\forms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "IS_v2\\forms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T23:41:54.061Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "WhenOpened": "2024-09-28T22:44:10.328Z"
             }
           ]
         }

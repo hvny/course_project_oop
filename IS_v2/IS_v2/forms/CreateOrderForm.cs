@@ -119,9 +119,8 @@ namespace IS_v2.forms
 
             using (var transaction = _context.Database.BeginTransaction())
             {
-                /*try
-                {*/
-                    // Проверьте, существует ли пользователь
+                try
+                {
                     var user = _context.users.FirstOrDefault(u => u.PhoneNumber == textBoxPhoneNum.Text);
                     if (user == null)
                     {
@@ -134,11 +133,10 @@ namespace IS_v2.forms
                         _context.SaveChanges();
                     }
 
-                    // Создайте новый заказ
                     var order = new Order
                     {
                         CreatedAt = DateTime.UtcNow,
-                        Status = "Новый",
+                        Status = "Создан",
                         Description = textBoxDescription.Text,
                         TotalPrice = CalculateTotalPrice(),
                         PaymentMethod = comboBoxPaymentMethod.SelectedItem.ToString(),
@@ -149,38 +147,48 @@ namespace IS_v2.forms
                     _context.orders.Add(order);
                     _context.SaveChanges();
 
-                    // Добавьте компоненты в заказ
+                    List<int> selectedServiceIds = new List<int>();
+                    foreach (DataGridViewRow serviceRow in dataGridViewOrderServices.Rows)
+                    {
+                        if (serviceRow.IsNewRow) continue;
+                        var serviceId = Convert.ToInt32(serviceRow.Cells[0].Value);
+                        selectedServiceIds.Add(serviceId);
+                    }
+
                     foreach (DataGridViewRow row in dataGridViewOrderComponents.Rows)
                     {
                         if (row.IsNewRow) continue;
                         var componentId = Convert.ToInt32(row.Cells[0].Value);
                         var quantity = Convert.ToInt32(row.Cells[2].Value);
 
-                        // Проверьте, существует ли компонент
                         var component = _context.components.Find(componentId);
                         if (component == null)
                         {
                             throw new Exception($"Компонент с ID {componentId} не найден.");
                         }
 
+                        int serviceId = GetServiceIdForComponent(componentId, selectedServiceIds);
+                        if (serviceId == 0)
+                        {
+                            throw new Exception("Не удалось найти соответствующий ServiceId для компонента.");
+                        }
+
                         var orderComponent = new ServiceComponent
                         {
                             ComponentId = componentId,
-                            Quantity = quantity
+                            Quantity = quantity,
+                            ServiceId = serviceId
                         };
                         _context.service_components.Add(orderComponent);
 
-                        // Уменьшите количество компонента
                         component.Quantity -= quantity;
                     }
 
-                    // Добавьте услуги в заказ
                     foreach (DataGridViewRow row in dataGridViewOrderServices.Rows)
                     {
                         if (row.IsNewRow) continue;
                         var serviceId = Convert.ToInt32(row.Cells[0].Value);
 
-                        // Проверьте, существует ли услуга
                         var service = _context.services.Find(serviceId);
                         if (service == null)
                         {
@@ -200,14 +208,20 @@ namespace IS_v2.forms
 
                     MessageBox.Show("Заказ успешно создан!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
-                /*}
+                }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
                     MessageBox.Show($"Ошибка при создании заказа: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+                }
             }
         }
+
+        private int GetServiceIdForComponent(int componentId, List<int> serviceIds)
+        {
+            return serviceIds.FirstOrDefault();
+        }
+
 
 
         private decimal CalculateTotalPrice()

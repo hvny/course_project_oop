@@ -60,12 +60,24 @@
             phone_number = new DataGridViewTextBoxColumn();
             label1 = new Label();
             tabPageWarehouse = new TabPage();
+            buttonDeleteComponent = new Button();
+            buttonAddComponent = new Button();
             dataGridViewComponents = new DataGridView();
             ComponentId = new DataGridViewTextBoxColumn();
             Name = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
             Quantity = new DataGridViewTextBoxColumn();
             label3 = new Label();
+            tabPageServices = new TabPage();
+            buttonDeleteService = new Button();
+            buttonAddService = new Button();
+            label4 = new Label();
+            dataGridViewServices = new DataGridView();
+            serviceId = new DataGridViewTextBoxColumn();
+            serviceName = new DataGridViewTextBoxColumn();
+            serviceDescription = new DataGridViewTextBoxColumn();
+            servicePrice = new DataGridViewTextBoxColumn();
+            npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
             tabControl1.SuspendLayout();
             tabPageOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
@@ -75,6 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewEmpl).BeginInit();
             tabPageWarehouse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewComponents).BeginInit();
+            tabPageServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewServices).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -83,6 +97,7 @@
             tabControl1.Controls.Add(tabPageDeliveries);
             tabControl1.Controls.Add(tabPageEmployees);
             tabControl1.Controls.Add(tabPageWarehouse);
+            tabControl1.Controls.Add(tabPageServices);
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -111,6 +126,7 @@
             buttonGoToOrder.TabIndex = 3;
             buttonGoToOrder.Text = "Перейти к заказу";
             buttonGoToOrder.UseVisualStyleBackColor = true;
+            buttonGoToOrder.Click += buttonGoToOrder_Click;
             // 
             // buttonAddOrder
             // 
@@ -352,6 +368,8 @@
             // 
             // tabPageWarehouse
             // 
+            tabPageWarehouse.Controls.Add(buttonDeleteComponent);
+            tabPageWarehouse.Controls.Add(buttonAddComponent);
             tabPageWarehouse.Controls.Add(dataGridViewComponents);
             tabPageWarehouse.Controls.Add(label3);
             tabPageWarehouse.Location = new Point(4, 29);
@@ -360,6 +378,26 @@
             tabPageWarehouse.TabIndex = 3;
             tabPageWarehouse.Text = "Склад";
             tabPageWarehouse.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteComponent
+            // 
+            buttonDeleteComponent.Location = new Point(772, 99);
+            buttonDeleteComponent.Name = "buttonDeleteComponent";
+            buttonDeleteComponent.Size = new Size(104, 39);
+            buttonDeleteComponent.TabIndex = 3;
+            buttonDeleteComponent.Text = "Удалить";
+            buttonDeleteComponent.UseVisualStyleBackColor = true;
+            buttonDeleteComponent.Click += buttonDeleteComponent_Click;
+            // 
+            // buttonAddComponent
+            // 
+            buttonAddComponent.Location = new Point(772, 35);
+            buttonAddComponent.Name = "buttonAddComponent";
+            buttonAddComponent.Size = new Size(104, 40);
+            buttonAddComponent.TabIndex = 2;
+            buttonAddComponent.Text = "Добавить";
+            buttonAddComponent.UseVisualStyleBackColor = true;
+            buttonAddComponent.Click += buttonAddComponent_Click;
             // 
             // dataGridViewComponents
             // 
@@ -405,9 +443,96 @@
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             label3.Location = new Point(3, 0);
             label3.Name = "label3";
-            label3.Size = new Size(224, 32);
+            label3.Size = new Size(200, 32);
             label3.TabIndex = 0;
-            label3.Text = "Список запчастей";
+            label3.Text = "Список деталей";
+            // 
+            // tabPageServices
+            // 
+            tabPageServices.Controls.Add(buttonDeleteService);
+            tabPageServices.Controls.Add(buttonAddService);
+            tabPageServices.Controls.Add(label4);
+            tabPageServices.Controls.Add(dataGridViewServices);
+            tabPageServices.Location = new Point(4, 29);
+            tabPageServices.Name = "tabPageServices";
+            tabPageServices.Padding = new Padding(3);
+            tabPageServices.Size = new Size(908, 403);
+            tabPageServices.TabIndex = 4;
+            tabPageServices.Text = "Услуги";
+            tabPageServices.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteService
+            // 
+            buttonDeleteService.Location = new Point(727, 110);
+            buttonDeleteService.Name = "buttonDeleteService";
+            buttonDeleteService.Size = new Size(124, 40);
+            buttonDeleteService.TabIndex = 3;
+            buttonDeleteService.Text = "Удалить";
+            buttonDeleteService.UseVisualStyleBackColor = true;
+            buttonDeleteService.Click += buttonDeleteService_Click;
+            // 
+            // buttonAddService
+            // 
+            buttonAddService.Location = new Point(727, 40);
+            buttonAddService.Name = "buttonAddService";
+            buttonAddService.Size = new Size(124, 40);
+            buttonAddService.TabIndex = 2;
+            buttonAddService.Text = "Добавить";
+            buttonAddService.UseVisualStyleBackColor = true;
+            buttonAddService.Click += buttonAddService_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            label4.Location = new Point(6, 5);
+            label4.Name = "label4";
+            label4.Size = new Size(168, 32);
+            label4.TabIndex = 1;
+            label4.Text = "Список услуг";
+            // 
+            // dataGridViewServices
+            // 
+            dataGridViewServices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewServices.Columns.AddRange(new DataGridViewColumn[] { serviceId, serviceName, serviceDescription, servicePrice });
+            dataGridViewServices.Location = new Point(6, 40);
+            dataGridViewServices.Name = "dataGridViewServices";
+            dataGridViewServices.RowHeadersWidth = 51;
+            dataGridViewServices.Size = new Size(644, 349);
+            dataGridViewServices.TabIndex = 0;
+            // 
+            // serviceId
+            // 
+            serviceId.HeaderText = "id";
+            serviceId.MinimumWidth = 6;
+            serviceId.Name = "serviceId";
+            serviceId.Width = 40;
+            // 
+            // serviceName
+            // 
+            serviceName.HeaderText = "Наименование";
+            serviceName.MinimumWidth = 6;
+            serviceName.Name = "serviceName";
+            serviceName.Width = 125;
+            // 
+            // serviceDescription
+            // 
+            serviceDescription.HeaderText = "Описание";
+            serviceDescription.MinimumWidth = 6;
+            serviceDescription.Name = "serviceDescription";
+            serviceDescription.Width = 300;
+            // 
+            // servicePrice
+            // 
+            servicePrice.HeaderText = "Цена";
+            servicePrice.MinimumWidth = 6;
+            servicePrice.Name = "servicePrice";
+            servicePrice.Width = 125;
+            // 
+            // npgsqlCommandBuilder1
+            // 
+            npgsqlCommandBuilder1.QuotePrefix = "\"";
+            npgsqlCommandBuilder1.QuoteSuffix = "\"";
             // 
             // Form1
             // 
@@ -415,7 +540,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(928, 450);
             Controls.Add(tabControl1);
-           // Name = "Form1";
+            //Name = "Form1";
             Text = "Сервис ремонта компьютерной техники";
             tabControl1.ResumeLayout(false);
             tabPageOrders.ResumeLayout(false);
@@ -429,6 +554,9 @@
             tabPageWarehouse.ResumeLayout(false);
             tabPageWarehouse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewComponents).EndInit();
+            tabPageServices.ResumeLayout(false);
+            tabPageServices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewServices).EndInit();
             ResumeLayout(false);
         }
 
@@ -472,5 +600,17 @@
         private DataGridViewTextBoxColumn order_price;
         private DataGridViewTextBoxColumn order_device;
         private DataGridViewTextBoxColumn order_userPhoneNumber;
+        private Button buttonAddComponent;
+        private Npgsql.NpgsqlCommandBuilder npgsqlCommandBuilder1;
+        private Button buttonDeleteComponent;
+        private TabPage tabPageServices;
+        private Button buttonDeleteService;
+        private Button buttonAddService;
+        private Label label4;
+        private DataGridView dataGridViewServices;
+        private DataGridViewTextBoxColumn serviceId;
+        private DataGridViewTextBoxColumn serviceName;
+        private DataGridViewTextBoxColumn serviceDescription;
+        private DataGridViewTextBoxColumn servicePrice;
     }
 }
