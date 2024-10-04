@@ -132,15 +132,16 @@ namespace IS_v2
         public void loadDeliveries()
         {
             dataGridViewDeliveries.Rows.Clear();
-
-            var deliveries = (from d in _context.deliveries
-                              select new
-                              {
-                                  d.DeliveryId,
-                                  d.DeliveryDate,
-                                  d.Status,
-                                  Components = d.DeliveryComponents.Select(dc => dc.Component.Name).ToList()
-                              }).ToList();
+            var deliveries = _context.deliveries.Include(d => d.DeliveryComponents)
+                .ThenInclude(dc => dc.Component)  // Загрузить связанные компоненты
+                .Select(d => new
+                {
+                d.DeliveryId,
+                d.DeliveryDate,
+                d.Status,
+                Components = d.DeliveryComponents.Select(dc => dc.Component.Name).ToList()
+           }).ToList();
+            
 
             if (deliveries.Count > 0)
             {

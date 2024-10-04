@@ -23,7 +23,5 @@ namespace IS_v2.classes
 
         [ForeignKey("ServiceId")]
         public Service Service { get; set; }
-
     }
-
 }

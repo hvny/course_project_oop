@@ -7,10 +7,18 @@ using System.Threading.Tasks;
 
 namespace IS_v2.classes
 {
-    public class Component
+    public class Component : IItem
     {
         [Column("component_id")]
         public int ComponentId { get; set; }
+
+        [NotMapped]
+        public int Id
+        {
+            get => ComponentId;
+            set => ComponentId = value;
+        }
+
 
         [Column("name")]
         public string Name { get; set; }
@@ -20,5 +28,10 @@ namespace IS_v2.classes
 
         [Column("quantity")]
         public int Quantity { get; set; }
+
+        public string GetInfo()
+        {
+            return $"Деталь: {Name}, Quantity: {Quantity}, Price: {Price}";
+        }
     }
 }

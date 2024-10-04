@@ -57,7 +57,7 @@ namespace IS_v2.forms
                 _context.services.Add(newService);
                 _context.SaveChanges();
 
-                MessageBox.Show($"Услуга {newService.Name} успешно добавлена!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Услуга {newService.GetInfo()} успешно добавлена!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }
